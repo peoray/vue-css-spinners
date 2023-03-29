@@ -16,7 +16,7 @@
 	height: 100%;
 	border-radius: 50%;
 	background: var(--rcs-circle-color);
-	animation: rcs-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+	animation: rcs-circle 10.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 
 @keyframes rcs-circle {
