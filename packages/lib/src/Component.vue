@@ -1,18 +1,17 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
-export default defineComponent({
-	name: 'MyComponent',
-	props: {
-		message: { type: String, required: true },
-	},
-	emits: ['messageChanged'],
-	setup() {},
-})
-</script>
 <template>
 	<h1>This is your component!</h1>
 	<div>
-		<p data-test-message>{{ message }} !!</p>
+		<p>Did it work {{ message }} !!</p>
 	</div>
 </template>
+
+<script setup lang="ts">
+// import {  } from 'vue;
+	defineProps<{
+		message: String
+	}>()
+	
+
+</script>
+
 <style lang="postcss"></style>
