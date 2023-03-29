@@ -1,17 +1,25 @@
 <template>
-	<h1>This is your component!</h1>
-	<div>
-		<p>Did it work {{ message }} !!</p>
-	</div>
+	<div :class="classes" :style="varStyle">
+    <div></div>
+    
+  </div>
 </template>
 
 <script setup lang="ts">
-// import {  } from 'vue;
-	defineProps<{
-		message: String
+import { ref } from 'vue';
+import type { Styles } from './types';
+
+	const props = defineProps<{
+		color: String,
+		size: String,
+		style: String,
+		className: String
 	}>()
-	
+
 
 </script>
 
-<style lang="postcss"></style>
+<style>
+@import './circle.css'
+
+</style>
