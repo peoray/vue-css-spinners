@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-	<div :class="[classes, props.className]" :style="varStyle" id="dd">
+	<div :class="classes" :style="varStyle">
 		<div></div>
 	</div>
 </template>
@@ -9,7 +9,7 @@
 import { ref, computed, type CSSProperties } from 'vue'
 
 export interface Props {
-	className?: string
+	class?: string
 	color?: string
 	size?: number
 	style?: CSSProperties
@@ -24,20 +24,16 @@ const props = defineProps<Props>()
 
 const varStyle = ref<Styles>({
 	...props.style,
-	'--vcs-circle-color': props.color ? props.color : undefined,
+	'--vcs-circle-color': props.color || undefined,
 	'--vcs-circle-size': props.size ? `${props.size}px` : undefined,
 })
 
+const clsx = (...classes: (string | undefined)[]): string =>
+	classes.filter(Boolean).join(' ')
+
 const baseClasses = 'vcs-circle'
 
-const classes = computed(() => {
-	const modifierClasses = []
-	if (props.className) {
-		modifierClasses.push(props.className)
-	}
-	return [baseClasses, modifierClasses]
-})
-// console.log(varStyle.value)
+const classes = computed(() => clsx(baseClasses, props.class))
 </script>
 
 <style>

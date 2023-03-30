@@ -1,5 +1,5 @@
 <template>
-	<MyComponent color="red" className="tt ss" size="100" />
+	<MyComponent color="red" class="tt ss" size="100" />
 </template>
 
 <script>
