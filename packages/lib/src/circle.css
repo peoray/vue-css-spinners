@@ -1,25 +1,25 @@
 :root {
-	--rcs-circle-color: #fff;
-	--rcs-circle-size: 64px;
+	--vcs-circle-color: #fff;
+	--vcs-circle-size: 64px;
 }
 
-.rcs-circle {
+.vcs-circle {
 	display: inline-block;
-	width: var(--rcs-circle-size);
-	height: var(--rcs-circle-size);
+	width: var(--vcs-circle-size);
+	height: var(--vcs-circle-size);
 	transform: translateZ(1px);
 }
 
-.rcs-circle > div {
+.vcs-circle > div {
 	display: inline-block;
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	background: var(--rcs-circle-color);
-	animation: rcs-circle 10.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+	background: var(--vcs-circle-color);
+	animation: vcs-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 
-@keyframes rcs-circle {
+@keyframes vcs-circle {
 	0%,
 	100% {
 		animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);

@@ -16,19 +16,19 @@ export interface Props {
 }
 
 interface Styles extends CSSProperties {
-	'--rcs-circle-color'?: string
-	'--rcs-circle-size'?: string
+	'--vcs-circle-color'?: string
+	'--vcs-circle-size'?: string
 }
 
 const props = defineProps<Props>()
 
 const varStyle = ref<Styles>({
 	...props.style,
-	'--rcs-circle-color': props.color ? props.color : undefined,
-	'--rcs-circle-size': props.size ? `${props.size}px` : undefined,
+	'--vcs-circle-color': props.color ? props.color : undefined,
+	'--vcs-circle-size': props.size ? `${props.size}px` : undefined,
 })
 
-const baseClasses = 'rcs-circle'
+const baseClasses = 'vcs-circle'
 
 const classes = computed(() => {
 	const modifierClasses = []

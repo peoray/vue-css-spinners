@@ -20,7 +20,7 @@ describe('Ring Component Test Suites', async () => {
 			}
 
 			expect(wrapper.props()).toEqual(props)
-			expect(wrapper.classes()).toContain('rcs-circle')
+			expect(wrapper.classes()).toContain('vcs-circle')
 		})
 
 		it('should accept custom className', async () => {
@@ -43,8 +43,8 @@ describe('Ring Component Test Suites', async () => {
 			})
 			const style = await wrapper.attributes('style')
 
-			expect(wrapper.html()).toContain('rcs-circle-color')
-			expect(style).toContain(`--rcs-circle-color: ${customColor}`)
+			expect(wrapper.html()).toContain('vcs-circle-color')
+			expect(style).toContain(`--vcs-circle-color: ${customColor}`)
 		})
 
 		it('should accept custom size', async () => {
@@ -56,8 +56,8 @@ describe('Ring Component Test Suites', async () => {
 			})
 			const style = await wrapper.attributes('style')
 
-			expect(wrapper.html()).toContain('rcs-circle-size')
-			expect(style).toContain(`--rcs-circle-size: ${customSize}px`)
+			expect(wrapper.html()).toContain('vcs-circle-size')
+			expect(style).toContain(`--vcs-circle-size: ${customSize}px`)
 		})
 
 		it('should accept custom styles', async () => {
@@ -78,7 +78,7 @@ describe('Ring Component Test Suites', async () => {
 		it('should render a div with the correct default class', () => {
 			const wrapper = mount(Circle)
 
-			expect(wrapper.get('div').classes()).toContain('rcs-circle')
+			expect(wrapper.get('div').classes()).toContain('vcs-circle')
 		})
 
 		it('should render a div with custom class', async () => {
@@ -101,7 +101,7 @@ describe('Ring Component Test Suites', async () => {
 			})
 
 			expect(wrapper.get('div').attributes('style')).toContain(
-				`--rcs-circle-size: ${customSize}px`
+				`--vcs-circle-size: ${customSize}px`
 			)
 		})
 
@@ -114,7 +114,7 @@ describe('Ring Component Test Suites', async () => {
 			})
 
 			expect(wrapper.get('div').attributes('style')).toContain(
-				`--rcs-circle-color: ${customColor}`
+				`--vcs-circle-color: ${customColor}`
 			)
 		})
 	})
