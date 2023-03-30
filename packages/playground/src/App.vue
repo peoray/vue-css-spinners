@@ -1,5 +1,10 @@
 <template>
-	<MyComponent color="#d36ac2" size="200" className="mt-12 bg-slate-600" />
+	<MyComponent
+		color="red"
+		className="tt ss"
+		style="border: 20px solid yellow"
+		size="200"
+	/>
 	<h1>Hello</h1>
 </template>
 
